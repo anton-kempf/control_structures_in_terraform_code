@@ -197,6 +197,8 @@ ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"] platform
 2. ["rc01","rc02","rc03","rc04",rc05","rc06","rc11","rc12","rc13","rc14",rc15","rc16","rc19"....."rc96"] те список от "rc01" до "rc96", пропуская все номера, заканчивающиеся на "0","7", "8", "9", за исключением "rc19"
 
 ```
+Ответ :
+
 locals {
   rc_list_filtered = [
     for i in range(1, 97) : format("rc%02d", i)
